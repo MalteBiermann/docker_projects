@@ -1,0 +1,23 @@
+pm_api_url          = "https://proxmox.local:8006/"
+pm_api_token_id     = "root@pam!terraform"
+pm_api_token_secret = "YOUR_TOKEN_SECRET"
+pm_tls_insecure     = true
+
+target_node   = "pve"
+lxc_template  = "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
+lxc_storage   = "local-lvm"
+lxc_gateway   = "192.168.1.1"
+lxc_netmask   = "24"
+lxc_ip_base   = "192.168.1"
+
+lxc_ssh_public_key = "ssh-ed25519 AAAA..."
+lxc_root_password  = "ChangeMeNow!"
+
+manager_id = 200
+worker_ids = [201, 202]
+
+swarm_advertise_addr = "192.168.1.10"
+
+portainer_version     = "2.20.3"
+portainer_http_port   = 9000
+portainer_https_port  = 9443

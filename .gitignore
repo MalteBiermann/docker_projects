@@ -1,0 +1,93 @@
+# === OS / Editor ===
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.tmp
+*.bak
+
+# === Logs ===
+*.log
+logs/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+build/
+dist/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# === Node / Frontend ===
+node_modules/
+dist/
+coverage/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+.output/
+
+# === Docker / Containers ===
+**/.env
+**/.env.*
+*.pid
+**/docker-data/
+**/data/tmp/
+
+# === Terraform ===
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+.terraform.lock.hcl
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# === Secrets / Keys ===
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+secrets/
+
+# === Local build artifacts ===
+tmp/
+temp/
+out/
+
+# === Project-specific ===
+**/sessions/
+**/music/

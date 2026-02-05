@@ -1,0 +1,15 @@
+services:
+  gmt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gmt
+    volumes:
+      - ./data:/opt/data
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+
+
+# Login: admin / geoserver
+# Start (still):  docker-compose up -d
+# Stop:               docker-compose downs

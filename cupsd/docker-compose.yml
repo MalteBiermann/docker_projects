@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  cupsd:
+    build: .
+    container_name: cupsd
+    restart: unless-stopped
+    ports:
+      - "631:631"
+      - "5353:5353/udp"
+    volumes:
+      - /var/spool/cups
+      - /var/log/cups
+    hostname: cupsd
