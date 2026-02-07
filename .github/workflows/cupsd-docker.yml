@@ -15,13 +15,6 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - platform: linux/amd64
-            arch: amd64
-          - platform: linux/arm64
-            arch: arm64
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,14 +38,15 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository_owner }}/cupsd
           tags: |
-            type=raw,value={{date 'YYYYMMDD'}}-${{ matrix.arch }}
+            type=raw,value={{date 'YYYYMMDD'}}
+            type=raw,value=latest
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: apps/cupsd
           file: apps/cupsd/Dockerfile
-          platforms: ${{ matrix.platform }}
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
