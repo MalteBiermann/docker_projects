@@ -1,7 +1,11 @@
-pm_api_url          = "https://proxmox.local:8006/"
-pm_api_token_id     = "root@pam!terraform"
-pm_api_token_secret = "YOUR_TOKEN_SECRET"
-pm_tls_insecure     = true
+pm_api_url      = "https://proxmox.local:8006/"
+pm_tls_insecure = true
+
+# Credentials should be provided via environment variables (see .env.example):
+# - TF_VAR_pm_api_token_id
+# - TF_VAR_pm_api_token_secret
+# - TF_VAR_lxc_ssh_public_key
+# - TF_VAR_lxc_root_password
 
 target_node   = "pve"
 lxc_template  = "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
@@ -10,8 +14,6 @@ lxc_gateway   = "192.168.1.1"
 lxc_netmask   = "24"
 lxc_ip_base   = "192.168.1"
 
-lxc_ssh_public_key = "ssh-ed25519 AAAA..."
-lxc_root_password  = "ChangeMeNow!"
 
 manager_id = 200
 worker_ids = [201, 202]
