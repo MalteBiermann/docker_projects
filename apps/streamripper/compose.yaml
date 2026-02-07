@@ -9,9 +9,10 @@
 # https://github.com/docker/awesome-compose
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+      # context: .
+      # dockerfile: Dockerfile
+    image: ghcr.io/maltebiermann/streamripper:latest
     restart: unless-stopped
     volumes:
       - music:/workspace/streamripper/music
@@ -20,6 +21,16 @@ services:
     ports:
       - target: 8001
         published: 8001
+        protocol: tcp
+  music-http:
+    image: python:3.11-alpine
+    command: python -m http.server --directory /srv/music 8080
+    restart: unless-stopped
+    volumes:
+      - music:/srv/music:ro
+    ports:
+      - target: 8080
+        published: 8080
         protocol: tcp
 
 
