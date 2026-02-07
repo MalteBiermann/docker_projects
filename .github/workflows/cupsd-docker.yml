@@ -1,9 +1,12 @@
-name: Publish Docker image
+name: Build cupsd image
 
 on:
   push:
     branches: ["main"]
-    tags: ["v*"]
+    paths:
+      - "apps/cupsd/**"
+      - ".github/workflows/cupsd-docker.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -33,13 +36,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository }}
+          images: ghcr.io/${{ github.repository_owner }}/cupsd
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: ./Dockerfile
+          context: apps/cupsd
+          file: apps/cupsd/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
