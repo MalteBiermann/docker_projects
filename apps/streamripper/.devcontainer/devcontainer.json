@@ -27,6 +27,6 @@
 	"service": "app",
 	"workspaceFolder": "/workspace/streamripper",
 	"mounts": [
-		"source=${localEnv:HOME}/Music,target=/workspace/streamripper/music,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder}/output,target=/workspace/streamripper/music,type=bind,consistency=cached"
 	],
 }
