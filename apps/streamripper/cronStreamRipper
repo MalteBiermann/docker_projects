@@ -1,5 +1,5 @@
 #m h d mon wd user cmd
-*/6 * * * * root su --shell=/bin/bash --command='date' appuser >/proc/1/fd/1 2>/proc/1/fd/1
+* * * * * root su --shell=/bin/bash --command='date' appuser >/proc/1/fd/1 2>/proc/1/fd/1
 
 # * * * * * root su --shell=/bin/bash --command='/workspace/streamripper/startStreamripper.sh 15' appuser >/proc/1/fd/1 2>/proc/1/fd/1
 
