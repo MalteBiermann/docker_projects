@@ -39,6 +39,8 @@ jobs:
           images: ghcr.io/${{ github.repository_owner }}/cupsd
           tags: |
             type=raw,value={{date 'YYYYMMDD'}}
+            type=raw,value={{date 'YYYYMMDD'}}-amd64
+            type=raw,value={{date 'YYYYMMDD'}}-arm64
             type=raw,value=latest
 
       - name: Build and push
