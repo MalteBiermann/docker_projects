@@ -1,0 +1,12 @@
+services:
+  streamripper-next:
+    build: .
+    container_name: streamripper-next
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ./config:/config
+      - ./data:/data
+      - ./logs:/var/log/streamripper
+      - ./state:/var/lib/streamripper
+    restart: unless-stopped

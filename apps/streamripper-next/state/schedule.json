@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-02-10T11:37:53.954852Z",
+  "stations": [
+    {
+      "name": "Oldenburg Eins (HF)",
+      "timezone": "Europe/Berlin",
+      "stream_url": "https://oeins.de/stream/oeins.mp3",
+      "entries": [
+        {
+          "title": "der morgenDas Morgenmagazinverantwortlich: oeins",
+          "start_time": "07:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "am vormittagDas aktuelle Magazinverantwortlich: oeins",
+          "start_time": "10:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "mixtourUnterhaltung am Mittagverantwortlich: oeins",
+          "start_time": "13:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "mixtourUnterhaltung am Nachmittagverantwortlich: oeins",
+          "start_time": "14:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "am nachmittagDas aktuelle Magazinverantwortlich: oeins",
+          "start_time": "15:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "Tauschers Plattenkisteverantwortlich: Alexander Tauscher",
+          "start_time": "18:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "Rock ohne Grenzenverantwortlich: Friedrich Boekhoff",
+          "start_time": "19:00",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "FreispielGrenzgängerverantwortlich: Jochen Reckemeyer",
+          "start_time": "21:00",
+          "date": "2026-02-11"
+        }
+      ]
+    }
+  ]
+}
