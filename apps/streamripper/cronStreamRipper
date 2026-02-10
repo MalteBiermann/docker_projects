@@ -1,8 +1,8 @@
 #m h d mon wd user cmd
-0 * * * * root su --shell=/bin/bash --command='date' appuser >>/workspace/streamripper/output/logs/$(date +\%Y\%m\%d).log 2>&1
+0 * * * * root su --shell=/bin/bash --command='date' appuser >>/workspace/streamripper/output/$(date +\%Y\%m\%d).log 2>&1
 # */6 * * * * root su --shell=/bin/bash --command='date' appuser >/proc/1/fd/1 2>/proc/1/fd/1
 
 # * * * * * root su --shell=/bin/bash --command='/workspace/streamripper/startStreamripper.sh 15' appuser >/proc/1/fd/1 2>/proc/1/fd/1
 
 # 58 17 * * 6 root su --shell=/bin/bash --command='/workspace/streamripper/startStreamripper.sh 7800' appuser >/proc/1/fd/1 2>/proc/1/fd/1
-58 17 * * 6 root su --shell=/bin/bash --command='/workspace/streamripper/startStreamripper.sh 60' appuser >>/workspace/streamripper/output/logs/$(date +\%Y\%m\%d).log 2>&1
+58 17 * * 6 root su --shell=/bin/bash --command='/workspace/streamripper/startStreamripper.sh 60' appuser >>/workspace/streamripper/output/$(date +\%Y\%m\%d).log 2>&1

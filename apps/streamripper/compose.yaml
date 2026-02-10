@@ -15,7 +15,7 @@ services:
     # image: ghcr.io/maltebiermann/streamripper:latest
     restart: unless-stopped
     volumes:
-      - music:/workspace/streamripper/output/
+      - ./output:/workspace/streamripper/output
     environment:
       - TZ=Europe/Berlin
     ports:
@@ -27,15 +27,11 @@ services:
     command: python -m http.server --directory /srv/output 8080
     restart: unless-stopped
     volumes:
-      - music:/srv/output:ro
+      - ./output:/srv/output:ro
     ports:
       - target: 8080
         published: 8080
         protocol: tcp
-
-
-volumes:
-  music:
 
     # If your application exposes a port, uncomment the following lines and change
     # the port numbers as needed. The first number is the host port and the second

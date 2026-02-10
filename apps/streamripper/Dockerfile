@@ -25,8 +25,7 @@ ARG WS='/workspace'
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m --shell /bin/bash $USERNAME
 
-RUN mkdir -p $WS/streamripper/output/music
-RUN mkdir -p $WS/streamripper/output/logs
+RUN mkdir -p $WS/streamripper/output
 
 COPY ./startStreamripper.sh $WS/streamripper/
 RUN chown -R $USERNAME:$USERNAME $WS/streamripper/*
