@@ -1,0 +1,5 @@
+# Local AdGuard data
+sessions.db
+stats.db
+config/AdGuardHome.yaml
+data/data/filters/1.txt
