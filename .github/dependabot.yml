@@ -1,0 +1,95 @@
+version: 2
+updates:
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Terraform
+  - package-ecosystem: "terraform"
+    directory: "/apps/docker-swarm"
+    schedule:
+      interval: "weekly"
+
+  # Pip (requirements.txt)
+  - package-ecosystem: "pip"
+    directory: "/apps/streamripper-next"
+    schedule:
+      interval: "weekly"
+
+  # Docker
+  - package-ecosystem: "docker"
+    directory: "/apps/conda-docker"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/cupsd"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/adguard"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/streamripper-next"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/geoserver-docker"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/mb-system-docker"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/streamripper"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/texlive-test"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/gmt-docker/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/docker-pep/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/ubuntu-dev/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/apps/latex/.devcontainer"
+    schedule:
+      interval: "weekly"
+
+  # Dev Containers
+  - package-ecosystem: "devcontainers"
+    directory: "/apps/gmt-docker/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "devcontainers"
+    directory: "/apps/texlive-test/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "devcontainers"
+    directory: "/apps/docker-pep/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "devcontainers"
+    directory: "/apps/streamripper/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "devcontainers"
+    directory: "/apps/ubuntu-dev/.devcontainer"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "devcontainers"
+    directory: "/apps/latex/.devcontainer"
+    schedule:
+      interval: "weekly"
