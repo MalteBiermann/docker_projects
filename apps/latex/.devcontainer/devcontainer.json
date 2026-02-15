@@ -11,11 +11,15 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-vscode-remote.remote-containers",
-				"ms-azuretools.vscode-docker",
 				"James-Yu.latex-workshop",
 				"mblode.zotero"
-			]
+			],
+			"settings": {
+				"latex-workshop.latex.autoBuild.run": "onFileChange",
+				"latex-workshop.latex.autoBuild.delay": 300,
+				"latex-workshop.latex.watch.usePolling": true,
+				"latex-workshop.latex.watch.interval": 2000
+			}
 		}
 	},
 
@@ -41,5 +45,5 @@
 
 	// MonoRepo support
 	// "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-	"workspaceFolder": "/workspace"
+	"workspaceFolder": "/workspace/LaTeX"
 }
