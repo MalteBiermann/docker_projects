@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "apps/cupsd/**"
+      - "cupsd/**"
       - ".github/workflows/cupsd-docker.yml"
   workflow_dispatch:
 
@@ -47,8 +47,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: apps/cupsd
-          file: apps/cupsd/Dockerfile
+          context: cupsd
+          file: cupsd/Dockerfile
           platforms: linux/amd64,linux/arm64, linux/arm64/v7
           push: true
           tags: ${{ steps.meta.outputs.tags }}

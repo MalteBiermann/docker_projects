@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "apps/streamripper-next/**"
+      - "streamripper-next/**"
       - ".github/workflows/streamripper-next-docker.yml"
   workflow_dispatch:
 
@@ -47,8 +47,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: apps/streamripper-next
-          file: apps/streamripper-next/Dockerfile
+          context: streamripper-next
+          file: streamripper-next/Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: ${{ steps.meta.outputs.tags }}
