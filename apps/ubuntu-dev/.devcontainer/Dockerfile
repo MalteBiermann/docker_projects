@@ -1,4 +1,4 @@
-FROM ubuntu:noble-20250127
+FROM ubuntu:noble-20260113
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
