@@ -3,6 +3,8 @@
 This repository is a monorepo containing multiple Docker-based projects.
 
 ## Apps
+- [adguard](adguard)
+- [apps](apps)
 - [conda-docker](conda-docker)
 - [cupsd](cupsd)
 - [docker-pep](docker-pep)
@@ -12,9 +14,11 @@ This repository is a monorepo containing multiple Docker-based projects.
 - [latex](latex)
 - [mb-system-docker](mb-system-docker)
 - [streamripper](streamripper)
+- [streamripper-next](streamripper-next)
 - [texlive-test](texlive-test)
 - [ubuntu-dev](ubuntu-dev)
 
 ## Notes
 - Each app is self-contained. Refer to each app folder for its Dockerfile, compose file, and project-specific README.
 - Use per-app .env files where applicable (see .env.example files).
+

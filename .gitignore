@@ -91,3 +91,4 @@ out/
 # === Project-specific ===
 **/sessions/
 **/music/
+**/database.db
