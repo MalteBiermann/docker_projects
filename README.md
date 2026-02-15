@@ -1,19 +1,19 @@
 # docker_projects monorepo
 
-This repository is a monorepo containing multiple Docker-based projects under apps/.
+This repository is a monorepo containing multiple Docker-based projects.
 
 ## Apps
-- [apps/conda-docker](apps/conda-docker)
-- [apps/cupsd](apps/cupsd)
-- [apps/docker-pep](apps/docker-pep)
-- [apps/docker-swarm](apps/docker-swarm)
-- [apps/geoserver-docker](apps/geoserver-docker)
-- [apps/gmt-docker](apps/gmt-docker)
-- [apps/latex](apps/latex)
-- [apps/mb-system-docker](apps/mb-system-docker)
-- [apps/streamripper](apps/streamripper)
-- [apps/texlive-test](apps/texlive-test)
-- [apps/ubuntu-dev](apps/ubuntu-dev)
+- [conda-docker](conda-docker)
+- [cupsd](cupsd)
+- [docker-pep](docker-pep)
+- [docker-swarm](docker-swarm)
+- [geoserver-docker](geoserver-docker)
+- [gmt-docker](gmt-docker)
+- [latex](latex)
+- [mb-system-docker](mb-system-docker)
+- [streamripper](streamripper)
+- [texlive-test](texlive-test)
+- [ubuntu-dev](ubuntu-dev)
 
 ## Notes
 - Each app is self-contained. Refer to each app folder for its Dockerfile, compose file, and project-specific README.
