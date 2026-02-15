@@ -6,7 +6,7 @@ services:
     container_name: adguardhome
     restart: unless-stopped
     env_file:
-      - secrets.env
+      - .env
     environment:
       TZ: ${TZ}
       ADMIN_USER: ${ADMIN_USER}
