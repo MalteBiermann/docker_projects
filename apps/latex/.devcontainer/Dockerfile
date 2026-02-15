@@ -1,4 +1,4 @@
-FROM ubuntu:noble@sha256:9cbed754112939e914291337b5e554b07ad7c392491dba6daf25eef1332a22e8
+FROM ubuntu:noble@sha256:cd1dba651b3080c3686ecf4e3c4220f026b521fb76978881737d24f200828b2b
 # ubuntu:noble-20250805
 
 ENV DEBIAN_FRONTEND=noninteractive
