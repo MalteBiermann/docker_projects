@@ -1,4 +1,4 @@
-FROM ubuntu:noble-20250805
+FROM ubuntu:noble-20260113
 
 ENV DEBIAN_FRONTEND=noninteractive
 # Keeps Python from generating .pyc files in the container
