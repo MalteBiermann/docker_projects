@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:noble-20250127
+FROM ubuntu:noble-20260113
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Berlin
