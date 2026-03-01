@@ -1,0 +1,21 @@
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": ".",
+		"dockerfile": "./Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"REditorSupport.r-syntax",
+				"REditorSupport.r"
+			],
+			"settings": {
+				"r.plot.useHttpgd": true,
+				"r.rterm.linux": "/usr/local/bin/radian"
+			}
+		}
+	},
+	"workspaceFolder": "/workspaces",
+	"workspaceMount": "source=${localWorkspaceFolder}/data,target=/workspaces,type=bind,consistency=cached"
+}

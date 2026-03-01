@@ -1,0 +1,16 @@
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": ".",
+		"dockerfile": "./Dockerfile"
+	},
+	"remoteEnv": {
+		"RENV_PATHS_CACHE": "/workspaces/renv/cache",
+		"RENV_PATHS_ROOT": "/workspaces/renv"
+	},
+	"postCreateCommand": "R --vanilla --quiet -e 'renv::consent(provided = TRUE); if (!file.exists(\"renv.lock\")) { cat(\"Creating initial lockfile...\\n\"); renv::snapshot(force = TRUE) } else { cat(\"Restoring from lockfile...\\n\"); renv::restore(prompt = FALSE) }'",
+	"mounts": [
+		"source=${localWorkspaceFolder}/renv/,target=/workspaces/renv/,type=bind"
+	],
+	"workspaceFolder": "/workspaces/data"
+}
